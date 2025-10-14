@@ -8,6 +8,25 @@ package quiz.humanresource;
  *
  * @author opc
  */
-public interface Employee {
+public class Employee {
+    
+   private String name;
+   private Department department;
+   
+   public String getName() {
+       return name;
+   }
+    
+   public void getName(String name) {
+       this.name = name;
+   }
+   
+   public Department getDepartment() {
+       return department;
+   }
+   public void setDepartment(Department department) {
+       this.department = department;
+   }
+    
     
 }
