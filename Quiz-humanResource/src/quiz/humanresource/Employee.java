@@ -16,8 +16,9 @@ public class Employee {
    public String getName() {
        return name;
    }
+   
     
-   public void getName(String name) {
+   public void setName(String name) {
        this.name = name;
    }
    

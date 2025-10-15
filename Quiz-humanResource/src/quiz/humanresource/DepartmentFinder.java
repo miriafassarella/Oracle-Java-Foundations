@@ -10,4 +10,12 @@ package quiz.humanresource;
  */
 public class DepartmentFinder {
     
+    public static Department find(String name) {
+        Department dep = new Department();
+        dep.setName(name);
+        
+        return dep;
+        
+    }
+    
 }

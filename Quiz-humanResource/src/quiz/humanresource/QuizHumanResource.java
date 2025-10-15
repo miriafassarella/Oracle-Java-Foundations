@@ -14,7 +14,14 @@ public class QuizHumanResource {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       Employee newEmployee = new Employee();
+       newEmployee.setName("Luana");
+       
+       
+       Department aDept = DepartmentFinder.find("products");
+       
+       aDept.assignEmployee(newEmployee);
+       aDept.print();
     }
     
 }
