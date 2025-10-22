@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package shopapp.duke.choice;
-
+import java.util.Arrays;
 /**
  *
  * @author opc
@@ -11,6 +11,14 @@ package shopapp.duke.choice;
 public class Customer {
     
     private String name;
+    public Clothing[] clothings = new Clothing[0];
+    
+    public void addClothings(Clothing clothing) {
+    
+       this.clothings = Arrays.copyOf(clothings, clothings.length + 1);
+        clothings[clothings.length - 1] = clothing;
+        
+    }
     
     public String getName(){
         return this.name;
@@ -21,5 +29,7 @@ public class Customer {
         this.name = name;
     
     }
+    
+    
     
 }

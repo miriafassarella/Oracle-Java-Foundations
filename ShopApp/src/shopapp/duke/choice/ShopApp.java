@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package shopapp.duke.choice;
-
+import java.util.Arrays;
 /**
  *
  * @author opc
@@ -14,9 +14,14 @@ public class ShopApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        double tax = 0.2;
+        double total;
        
         Clothing item1; 
         Clothing item2;
+        
+        Customer client = new Customer();
+        
         
         item1 = new Clothing();
         item2 = new Clothing();
@@ -35,6 +40,18 @@ public class ShopApp {
         System.out.println("Item 2 : ");
 
         System.out.printf("Description: %s, Price: %f, Size: %c%n", item2.description, item2.price, item2.size);
+        
+       client.addClothings(item1);
+       client.addClothings(item2);
+       client.addClothings(item2);
+       
+       for (int i = 0; i < client.clothings.length; i++) {
+           
+           System.out.println(client.clothings[i].description);
+       
+       }
+        
+        
     
     }
     
