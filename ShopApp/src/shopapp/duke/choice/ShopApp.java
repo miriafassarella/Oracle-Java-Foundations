@@ -15,7 +15,7 @@ public class ShopApp {
      */
     public static void main(String[] args) {
         double tax = 0.2;
-        double total;
+        double total = 0.0;
        
         Clothing item1; 
         Clothing item2;
@@ -48,9 +48,14 @@ public class ShopApp {
        for (int i = 0; i < client.clothings.length; i++) {
            
            System.out.println(client.clothings[i].description);
+           
+           
+           
+          total += client.clothings[i].price + (client.clothings[i].price * tax);
        
        }
         
+       System.out.printf("Total da compra do client 1 : %.2f%n", total);
         
     
     }
