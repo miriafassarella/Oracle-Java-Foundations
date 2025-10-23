@@ -15,12 +15,15 @@ public class ShopApp {
      */
     public static void main(String[] args) {
         double tax = 0.2;
-        double total = 0.0;
+        double total = 0;
+        int measurement = 3;
        
         Clothing item1; 
         Clothing item2;
         
         Customer client = new Customer();
+        client.name = "Aline";
+        client.size = "S";
         
         
         item1 = new Clothing();
@@ -45,17 +48,30 @@ public class ShopApp {
        client.addClothings(item2);
        client.addClothings(item2);
        
+      Clothing[] items = {item1, item2};
+       
        for (int i = 0; i < client.clothings.length; i++) {
            
            System.out.println(client.clothings[i].description);
            
            
            
-          total += client.clothings[i].price + (client.clothings[i].price * tax);
+         // total += client.clothings[i].price + (client.clothings[i].price * tax);
        
        }
         
        System.out.printf("Total da compra do client 1 : %.2f%n", total);
+       
+       
+       switch (measurement) {
+           case 1,2,3 : client.size = "S";
+                break;
+           case 4,5,6 : client.size = "M";
+                break;
+           case 7,8,9 : client.size = "L";
+                break;
+           default : client.size = "X";
+       }
         
     
     }

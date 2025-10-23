@@ -10,8 +10,9 @@ import java.util.Arrays;
  */
 public class Customer {
     
-    private String name;
-    public Clothing[] clothings = new Clothing[0];
+    String name;
+    String size;
+    Clothing[] clothings = new Clothing[0];
     
     public void addClothings(Clothing clothing) {
     
