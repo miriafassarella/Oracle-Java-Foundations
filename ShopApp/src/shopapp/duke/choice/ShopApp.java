@@ -21,13 +21,17 @@ public class ShopApp {
         Clothing item1; 
         Clothing item2;
         
+        
+        
         Customer client = new Customer();
         client.name = "Aline";
-        client.size = "S";
+        client.size = 'S';
         
         
         item1 = new Clothing();
         item2 = new Clothing();
+        
+        
         
         item1.description = "Blue Jacket";
         item1.price = 20.9;
@@ -38,17 +42,28 @@ public class ShopApp {
         item2.size = 'S';
         
         
-        System.out.println("Item 1 : ");
-        System.out.printf("Description: %s, Price: %f, Size: %c%n", item1.description, item1.price, item1.size);
-        System.out.println("Item 2 : ");
+        
+        
+        //System.out.println("Item 1 : ");
+        //System.out.printf("Description: %s, Price: %f, Size: %c%n", item1.description, item1.price, item1.size);
+        //System.out.println("Item 2 : ");
 
-        System.out.printf("Description: %s, Price: %f, Size: %c%n", item2.description, item2.price, item2.size);
+        //System.out.printf("Description: %s, Price: %f, Size: %c%n", item2.description, item2.price, item2.size);
         
        client.addClothings(item1);
        client.addClothings(item2);
        client.addClothings(item2);
        
-      Clothing[] items = {item1, item2};
+      Clothing[] items = {item1, item2, new Clothing(), new Clothing()};
+      
+      
+        items[2].description = "Greem Scarf";
+        items[2].price = 5;
+        items[2].size = 'S';
+        
+        items[3].description = "Blue T-Shirt";
+        items[3].price = 10.5;
+        items[3].size = 'S';
        
        for (int i = 0; i < client.clothings.length; i++) {
            
@@ -59,18 +74,35 @@ public class ShopApp {
          // total += client.clothings[i].price + (client.clothings[i].price * tax);
        
        }
+       
+       for (Clothing item : items ) {
+           
+           
+           if (client.size == item.size) {
+               
+               total += item.price + (item.price * tax);
+               System.out.println(item.description);
+               
+               if (total > 15) {
+                   break;
+               }
+           }
+           
+           
+       
+       }
         
        System.out.printf("Total da compra do client 1 : %.2f%n", total);
        
        
        switch (measurement) {
-           case 1,2,3 : client.size = "S";
+           case 1,2,3 : client.size = 'S';
                 break;
-           case 4,5,6 : client.size = "M";
+           case 4,5,6 : client.size = 'M';
                 break;
-           case 7,8,9 : client.size = "L";
+           case 7,8,9 : client.size = 'L';
                 break;
-           default : client.size = "X";
+           default : client.size = 'X';
        }
         
     

@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class Customer {
     
     String name;
-    String size;
+    char size;
     Clothing[] clothings = new Clothing[0];
     
     public void addClothings(Clothing clothing) {
