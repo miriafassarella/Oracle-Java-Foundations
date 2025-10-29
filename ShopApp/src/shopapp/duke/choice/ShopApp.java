@@ -80,7 +80,7 @@ public class ShopApp {
            
            if (client.size == item.size) {
                
-               total += item.price + (item.price * tax);
+               total += item.getPrice();
                System.out.println(item.description);
                
                if (total > 15) {
