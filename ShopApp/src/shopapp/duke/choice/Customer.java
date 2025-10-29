@@ -20,6 +20,29 @@ public class Customer {
         clothings[clothings.length - 1] = clothing;
         
     }
+
+    public char getSize() {
+        return size;
+    }
+
+    public void setSize(char size) {
+        this.size = size;
+    }
+    
+    public void setSize(int size) {
+        
+         switch (size) {
+           case 1,2,3 : this.size = 'S';
+                break;
+           case 4,5,6 : this.size = 'M';
+                break;
+           case 7,8,9 : this.size = 'L';
+                break;
+           default : this.size = 'X';
+       }
+        
+    
+    }
     
     public String getName(){
         return this.name;

@@ -14,9 +14,8 @@ public class ShopApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        double tax = 0.2;
-        double total = 0;
-        int measurement = 3;
+       double total = 0;
+        
        
         Clothing item1; 
         Clothing item2;
@@ -25,7 +24,7 @@ public class ShopApp {
         
         Customer client = new Customer();
         client.name = "Aline";
-        client.size = 'S';
+        client.setSize(3);
         
         
         item1 = new Clothing();
@@ -78,10 +77,10 @@ public class ShopApp {
        for (Clothing item : items ) {
            
            
-           if (client.size == item.size) {
+           if (client.getSize() == item.size) {
                
                total += item.getPrice();
-               System.out.println(item.description);
+               System.out.println(item.setDescription(description));
                
                if (total > 15) {
                    break;
@@ -95,16 +94,7 @@ public class ShopApp {
        System.out.printf("Total da compra do client 1 : %.2f%n", total);
        
        
-       switch (measurement) {
-           case 1,2,3 : client.size = 'S';
-                break;
-           case 4,5,6 : client.size = 'M';
-                break;
-           case 7,8,9 : client.size = 'L';
-                break;
-           default : client.size = 'X';
-       }
-        
+      
     
     }
     
