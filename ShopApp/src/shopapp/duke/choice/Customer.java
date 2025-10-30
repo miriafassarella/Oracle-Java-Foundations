@@ -4,6 +4,7 @@
  */
 package shopapp.duke.choice;
 import java.util.Arrays;
+import java.util.List;
 /**
  *
  * @author opc
@@ -12,13 +13,28 @@ public class Customer {
     
     String name;
     char size;
-    Clothing[] clothings = new Clothing[0];
+     Clothing[] clothes = new Clothing[0];
     
     public void addClothings(Clothing clothing) {
     
-       this.clothings = Arrays.copyOf(clothings, clothings.length + 1);
-        clothings[clothings.length - 1] = clothing;
+       this.clothes = Arrays.copyOf(clothes, clothes.length + 1);
+        clothes[clothes.length - 1] = clothing;
         
+    }
+    
+    public Clothing[] list() {
+    
+        return this.clothes;
+    }
+    
+    public double getTotalClothingCost() {
+        double total = 0;
+    
+        for (Clothing item : this.clothes) {
+            total += item.getPrice();
+        }
+    
+        return total;
     }
 
     public char getSize() {

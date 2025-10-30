@@ -64,9 +64,9 @@ public class ShopApp {
         items[3].price = 10.5;
         items[3].size = 'S';
        
-       for (int i = 0; i < client.clothings.length; i++) {
+       for (int i = 0; i < client.clothes.length; i++) {
            
-           System.out.println(client.clothings[i].description);
+           System.out.println(client.clothes[i].description);
            
            
            
@@ -80,7 +80,7 @@ public class ShopApp {
            if (client.getSize() == item.size) {
                
                total += item.getPrice();
-               System.out.println(item.setDescription(description));
+               System.out.println(item.description);
                
                if (total > 15) {
                    break;
