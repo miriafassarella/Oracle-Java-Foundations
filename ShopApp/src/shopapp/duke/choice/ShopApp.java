@@ -74,24 +74,9 @@ public class ShopApp {
        
        }
        
-       for (Clothing item : items ) {
-           
-           
-           if (client.getSize() == item.size) {
-               
-               total += item.getPrice();
-               System.out.println(item.description);
-               
-               if (total > 15) {
-                   break;
-               }
-           }
-           
-           
-       
-       }
+      
         
-       System.out.printf("Total da compra do client 1 : %.2f%n", total);
+       System.out.printf("Total da compra do client 1 : %.2f%n", client.getTotalClothingCost());
        
        
       

@@ -14,6 +14,41 @@ public class Clothing {
     double price;
     char size = 'M';
     
+    final double PRICE_MINIMUM = 10;
+    final double TAX_RATE = 0.2;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getPrice() {
+        price += price * TAX_RATE; 
+        return price;
+    }
+
+    public void setPrice(double price) {
+        
+        if (price > PRICE_MINIMUM) {
+            this.price = price;
+        
+        }else {
+            throw new RuntimeException("O preço não pode ser menor que 10");
+        
+        }
+    }
+
+    public char getSize() {
+        return size;
+    }
+
+    public void setSize(char size) {
+        this.size = size;
+    }
+    
     
     
     

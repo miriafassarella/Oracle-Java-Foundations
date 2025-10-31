@@ -4,7 +4,7 @@
  */
 package shopapp.duke.choice;
 import java.util.Arrays;
-import java.util.List;
+
 /**
  *
  * @author opc
@@ -22,7 +22,7 @@ public class Customer {
         
     }
     
-    public Clothing[] list() {
+    public Clothing[] getClothes() {
     
         return this.clothes;
     }
