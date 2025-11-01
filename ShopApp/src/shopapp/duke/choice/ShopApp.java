@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package shopapp.duke.choice;
-import java.util.Arrays;
 /**
  *
  * @author opc
@@ -26,22 +25,10 @@ public class ShopApp {
         client.setSize(3);
         
         
-        item1 = new Clothing();
-        item2 = new Clothing();
-        
-        
-        
-        item1.description = "Blue Jacket";
-        item1.price = 20.9;
-        item1.size = 'M';
-        
-        item2.description = "Orange T-Shirt";
-        item2.price = 10.5;
-        item2.size = 'S';
-        
-        
-        
-        
+        item1 = new Clothing("Blue Jacket", 20.9, 'M');
+        item2 = new Clothing("Orange T-Shirt", 10.5, 'S');
+      
+          
         //System.out.println("Item 1 : ");
         //System.out.printf("Description: %s, Price: %f, Size: %c%n", item1.description, item1.price, item1.size);
         //System.out.println("Item 2 : ");
@@ -52,16 +39,9 @@ public class ShopApp {
        client.addClothings(item2);
        client.addClothings(item2);
        
-      Clothing[] items = {item1, item2, new Clothing(), new Clothing()};
+      Clothing[] items = {item1, item2, new Clothing("Greem Scarf", 5, 'S'), new Clothing("Blue T-Shirt", 10.5, 'S')};
       
-      
-        items[2].description = "Greem Scarf";
-        items[2].price = 5;
-        items[2].size = 'S';
-        
-        items[3].description = "Blue T-Shirt";
-        items[3].price = 10.5;
-        items[3].size = 'S';
+     
        
        for (int i = 0; i < client.clothes.length; i++) {
            
