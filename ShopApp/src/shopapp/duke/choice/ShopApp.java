@@ -22,8 +22,7 @@ public class ShopApp {
         
         
         
-        Customer client = new Customer();
-        client.name = "Aline";
+        Customer client = new Customer("Pinky", 3);
         client.setSize(3);
         
         

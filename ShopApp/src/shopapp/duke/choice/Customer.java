@@ -14,6 +14,13 @@ public class Customer {
     String name;
     char size;
      Clothing[] clothes = new Clothing[0];
+
+    public Customer(String name, int measurement) {
+        this.name = name;
+        setSize(measurement);
+    }
+     
+     
     
     public void addClothings(Clothing clothing) {
     
