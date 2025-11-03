@@ -14,12 +14,13 @@ public class Clothing {
     double price;
     char size = 'M';
     
-    final double PRICE_MINIMUM = 10;
-    final double TAX_RATE = 0.2;
+    static final double PRICE_MINIMUM = 10;
+    static final double TAX_RATE = 0.2;
 
-    public Clothing(String description, double price) {
+    public Clothing(String description, double price, char size) {
         this.description = description;
         this.price = price;
+        this.size = size;
     }
     
     

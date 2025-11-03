@@ -15,6 +15,7 @@ public class ShopApp {
     public static void main(String[] args) {
        double total = 0;
         
+        System.out.printf("Minimum price value: %.2f%n", Clothing.PRICE_MINIMUM);
        
         Clothing item1; 
         Clothing item2;
