@@ -29,6 +29,8 @@ public class Customer {
         
     }
     
+   
+    
     public Clothing[] getClothes() {
     
         return this.clothes;

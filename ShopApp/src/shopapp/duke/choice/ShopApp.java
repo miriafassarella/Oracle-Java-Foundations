@@ -44,11 +44,26 @@ public class ShopApp {
       
      
        
+        
+        double add = 0.0;
+        double average = 0.0;
+        
+        for (Clothing item : client.clothes) {
+        
+            add += item.getPrice();
+            average = add / items.length;
+        
+        
+        }
+        
+        System.out.printf("Average total value of purchases made : %.2f%n", average);
+    
+       
        for (int i = 0; i < client.clothes.length; i++) {
            
            System.out.println(client.clothes[i].description);
            
-           
+         
            
          // total += client.clothings[i].price + (client.clothings[i].price * tax);
        
