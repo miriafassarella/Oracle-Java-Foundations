@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class Customer {
     
     String name;
-    char size;
+    String size;
      Clothing[] clothes = new Clothing[0];
 
     public Customer(String name, int measurement) {
@@ -46,24 +46,24 @@ public class Customer {
         return total;
     }
 
-    public char getSize() {
+    public String getSize() {
         return size;
     }
 
-    public void setSize(char size) {
+    public void setSize(String size) {
         this.size = size;
     }
     
     public void setSize(int size) {
         
          switch (size) {
-           case 1,2,3 : this.size = 'S';
+           case 1,2,3 : this.size = "S";
                 break;
-           case 4,5,6 : this.size = 'M';
+           case 4,5,6 : this.size = "M";
                 break;
-           case 7,8,9 : this.size = 'L';
+           case 7,8,9 : this.size = "L";
                 break;
-           default : this.size = 'X';
+           default : this.size = "X";
        }
         
     

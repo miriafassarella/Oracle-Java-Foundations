@@ -26,8 +26,8 @@ public class ShopApp {
         client.setSize(3);
         
         
-        item1 = new Clothing("Blue Jacket", 20.9, 'M');
-        item2 = new Clothing("Orange T-Shirt", 10.5, 'S');
+        item1 = new Clothing("Blue Jacket", 20.9, "M");
+        item2 = new Clothing("Orange T-Shirt", 10.5, "S");
       
           
         //System.out.println("Item 1 : ");
@@ -40,23 +40,37 @@ public class ShopApp {
        client.addClothings(item2);
        client.addClothings(item2);
        
-      Clothing[] items = {item1, item2, new Clothing("Greem Scarf", 5, 'S'), new Clothing("Blue T-Shirt", 10.5, 'S')};
+      Clothing[] items = {item1, item2, new Clothing("Greem Scarf", 5, "S"), new Clothing("Blue T-Shirt", 10.5, "S")};
       
      
        
         
-        double add = 0.0;
-        double average = 0.0;
+        
+        int average = 0;
+        int count = 0;
         
         for (Clothing item : client.clothes) {
         
-            add += item.getPrice();
-            average = add / items.length;
+            if (item.getSize().equals("L")) {
+                
+                average += item.getPrice();
+                count++;
+            
+            }
+            
+         }
+        
+        try {
+            average = (count == 0) ? 0 : average / count;
+            average = average / count;
+            System.out.printf("Average total value of purchases made : %.2f%n", average);
+        
+        }catch(ArithmeticException e) {
+          System.out.println("Dont divide by 0");
+        
+       }
         
         
-        }
-        
-        System.out.printf("Average total value of purchases made : %.2f%n", average);
     
        
        for (int i = 0; i < client.clothes.length; i++) {

@@ -12,12 +12,12 @@ public class Clothing {
     
     String description;
     double price;
-    char size = 'M';
+    String size = "M";
     
     static final double PRICE_MINIMUM = 10;
     static final double TAX_RATE = 0.2;
 
-    public Clothing(String description, double price, char size) {
+    public Clothing(String description, double price, String size) {
         this.description = description;
         this.price = price;
         this.size = size;
@@ -49,11 +49,11 @@ public class Clothing {
         }
     }
 
-    public char getSize() {
+    public String getSize() {
         return size;
     }
 
-    public void setSize(char size) {
+    public void setSize(String size) {
         this.size = size;
     }
     
