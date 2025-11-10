@@ -75,8 +75,10 @@ public class ShopApp {
        
        for (int i = 0; i < client.clothes.length; i++) {
            
-           System.out.println(client.clothes[i].description);
+           //System.out.println(client.clothes[i].description);
            
+           System.out.println(client.clothes[i]);
+        
          
            
          // total += client.clothings[i].price + (client.clothings[i].price * tax);
@@ -87,6 +89,7 @@ public class ShopApp {
         
        System.out.printf("Total da compra do client 1 : %.2f%n", client.getTotalClothingCost());
        
+      
        
       
     
