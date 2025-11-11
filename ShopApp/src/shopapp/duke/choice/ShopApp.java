@@ -77,7 +77,7 @@ public class ShopApp {
            
            //System.out.println(client.clothes[i].description);
            
-           System.out.println(client.clothes[i]);
+           System.out.println(client.clothes[i].toString());
         
          
            
