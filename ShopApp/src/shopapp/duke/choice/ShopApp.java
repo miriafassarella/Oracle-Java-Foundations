@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package shopapp.duke.choice;
+
+import java.util.Arrays;
+
 /**
  *
  * @author opc
@@ -36,14 +39,14 @@ public class ShopApp {
 
         //System.out.printf("Description: %s, Price: %f, Size: %c%n", item2.description, item2.price, item2.size);
         
-       client.addClothings(item1);
-       client.addClothings(item2);
-       client.addClothings(item2);
+      // client.addClothings(item1);
+       //client.addClothings(item2);
+       //client.addClothings(item2);
        
       Clothing[] items = {item1, item2, new Clothing("Greem Scarf", 5, "S"), new Clothing("Blue T-Shirt", 10.5, "S")};
       
      
-       
+       client.addClothes(items);
         
         
         int average = 0;
@@ -71,7 +74,7 @@ public class ShopApp {
        }
         
         
-    
+    Arrays.sort(client.clothes);
        
        for (int i = 0; i < client.clothes.length; i++) {
            

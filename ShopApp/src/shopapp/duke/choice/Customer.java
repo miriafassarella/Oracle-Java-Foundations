@@ -13,7 +13,7 @@ public class Customer {
     
     String name;
     String size;
-     Clothing[] clothes = new Clothing[0];
+    Clothing[] clothes = new Clothing[0];
 
     public Customer(String name, int measurement) {
         this.name = name;
@@ -27,6 +27,10 @@ public class Customer {
        this.clothes = Arrays.copyOf(clothes, clothes.length + 1);
         clothes[clothes.length - 1] = clothing;
         
+    }
+    
+    public void addClothes(Clothing[] clothes) {
+        this.clothes = clothes;
     }
     
    
