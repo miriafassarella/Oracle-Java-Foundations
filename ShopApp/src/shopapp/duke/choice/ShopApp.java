@@ -5,7 +5,11 @@
 package shopapp.duke.choice;
 
 import java.util.Arrays;
-
+import io.helidon.webserver.Routing;
+import io.helidon.webserver.ServerConfiguration;
+import io.helidon.webserver.WebServer;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 /**
  *
  * @author opc
@@ -32,6 +36,9 @@ public class ShopApp {
         item1 = new Clothing("Blue Jacket", 20.9, "M");
         item2 = new Clothing("Orange T-Shirt", 10.5, "S");
       
+        
+      
+       
           
         //System.out.println("Item 1 : ");
         //System.out.printf("Description: %s, Price: %f, Size: %c%n", item1.description, item1.price, item1.size);
@@ -45,7 +52,19 @@ public class ShopApp {
        
       Clothing[] items = {item1, item2, new Clothing("Greem Scarf", 5, "S"), new Clothing("Blue T-Shirt", 10.5, "S")};
       
-     
+      try {
+            ItemList list = new ItemList(items);
+            Routing routing = Routing.builder().get("/items", list).build();
+            
+            ServerConfiguration config = ServerConfiguration.builder()
+                    .bindAddress(InetAddress.getLocalHost())
+                    .port(8888).build();
+            
+            WebServer ws = WebServer.create(config, routing);
+        }catch (UnknownHostException ex){
+            ex.printStackTrace();
+        
+        }
        client.addClothes(items);
         
         
@@ -74,13 +93,13 @@ public class ShopApp {
        }
         
         
-    Arrays.sort(client.clothes);
+    Arrays.sort(client.clothes); //so posso usar se a classe cloting implementar a interface Comparable e o metodo compareTo()
        
        for (int i = 0; i < client.clothes.length; i++) {
            
            //System.out.println(client.clothes[i].description);
            
-           System.out.println(client.clothes[i].toString());
+           System.out.println(client.clothes[i]);
         
          
            

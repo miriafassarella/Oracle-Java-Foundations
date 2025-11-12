@@ -67,8 +67,11 @@ public class Clothing implements Comparable<Clothing>{
 
     @Override
     public int compareTo(Clothing c) {
-        return this.description.compareTo(c.description);
+       return this.description.compareTo(c.description);
+       //return Double.compare(this.price, c.price);
     }
+
+    
         
     
     
