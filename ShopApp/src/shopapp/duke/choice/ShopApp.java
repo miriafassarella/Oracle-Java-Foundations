@@ -61,6 +61,7 @@ public class ShopApp {
                     .port(8888).build();
             
             WebServer ws = WebServer.create(config, routing);
+            ws.start();
         }catch (UnknownHostException ex){
             ex.printStackTrace();
         
