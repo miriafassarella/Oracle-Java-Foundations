@@ -36,6 +36,32 @@ public class Department {
       
     }
     
+    public Employee[] printEmployees(){
+        
+        Employee[] newEmployee = new Employee[0];
+        
+       for (int i = 0; i < this.employees.length; i++) {
+           
+           if (this.employees[i] != null) {
+              newEmployee[i] = this.employees[i];
+           }
+          }
+    
+       return newEmployee;
+    
+    }
+    
+    public int numberEmployee() {
+        int number = 0;
+    
+        for (Employee employee : this.employees) {
+            if (employee != null) {
+                number++;
+            }
+        }
+        return number;
+    }
+    
     @Override
     public String toString() {
     
