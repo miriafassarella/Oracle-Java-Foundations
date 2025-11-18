@@ -21,14 +21,19 @@ public class Employee {
         this.salary = salary;
     }
     
+    public Employee(){
+    
+    
+    }
+    
     @Override
     public String toString(){
     
-        return "Number: " + this.id + "Name: " + this.name + "Salary: " + this.salary;
+        return "Number: " + this.id + " Name: " + this.name + " Salary: " + this.salary;
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {

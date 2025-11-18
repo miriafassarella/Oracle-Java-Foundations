@@ -4,6 +4,7 @@
  */
 package hrapp;
 
+import java.util.Arrays;
 
 
 
@@ -43,6 +44,7 @@ public class Department {
        for (int i = 0; i < this.employees.length; i++) {
            
            if (this.employees[i] != null) {
+              newEmployee = Arrays.copyOf(newEmployee, newEmployee.length + 1);
               newEmployee[i] = this.employees[i];
            }
           }
@@ -50,6 +52,20 @@ public class Department {
        return newEmployee;
     
     }
+    
+    public Employee findId(int id) {
+       
+        Employee emp = new Employee();
+    
+        for (Employee employee : this.employees) {
+            
+            if (employee != null && employee.getId() == id) {
+            emp = employee;
+            }
+            }
+        
+            return emp;
+         }
     
     public int numberEmployee() {
         int number = 0;
@@ -60,6 +76,35 @@ public class Department {
             }
         }
         return number;
+    }
+    
+    public double averageSalary(){
+        double average = 0;
+        int count = 0;      
+        for (Employee employee : this.employees) {
+            if (employee != null) {
+            average += employee.getSalary();
+            count++;
+         }
+          
+               }
+        
+        return average /count;
+        }
+        
+    
+    public double totalSalary(){
+        
+        double total = 0;
+        for (Employee employee : this.employees) {
+            if (employee != null) {
+            total += employee.getSalary();
+            
+            }
+            
+        
+        }
+        return total;
     }
     
     @Override
